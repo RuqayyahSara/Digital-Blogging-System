@@ -1,5 +1,5 @@
 import express from "express";
-import config from "config"
+import config from "config";
 import cookieParser from 'cookie-parser'
 import apiRouter from "./controllers/index.js";
 import "./dbConnect.js";

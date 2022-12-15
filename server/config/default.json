@@ -1,0 +1,14 @@
+{
+    "PORT": 3000,
+    "URL": "http://blog.compiler.today",
+    "DB": {
+        "DB_USERNAME": "drivewit_sara",
+        "DB_PASSWORD": "saradb",
+        "DB_NAME": "drivewit_saradb",
+        "DB_HOST": "drivewithmillionare.com"
+    },
+    "SECRET_KEYS": {
+        "JWT": "CS.CODE.IN",
+        "CRYPTO": "CS21.CODE.IN"
+    }
+}

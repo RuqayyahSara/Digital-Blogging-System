@@ -1,8 +1,13 @@
 import mysql from "mysql2";
 import config from "config";
 
-const { DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST } = config.get("DB");
-
+//const { DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST } = config.get("DB");
+const DB = {
+        DB_USERNAME: "drivewit_sara",
+        DB_PASSWORD: "saradb",
+        DB_NAME: "drivewit_saradb",
+        DB_HOST: "drivewithmillionare.com"
+    }
 
 const pool = mysql.createPool({
     host: DB_HOST,

@@ -7,7 +7,7 @@ import UsersContext from "../contexts/Users/UserContext";
 import Loading from "../components/Loading"
 function Home() {
   const usersContext = useContext(UsersContext);
-  const { posts, getPosts } = usersContext;
+  const { posts, getPosts, loading } = usersContext;
 
   useEffect(() => {
     getPosts()
@@ -23,6 +23,7 @@ function Home() {
         <div className="col-12 col-lg-9">
           <div className="d-flex flex-column mx-lg-5">
             <div>
+ {loading && <Loading/>}
               {posts.length ? posts.map((post, i) => (
                 <div className="m-lg-3 m-1 d-flex flex-column gap-3" key={i}>
                   <img src={post.img} className="rounded-4 w-100" alt="" />
@@ -50,7 +51,9 @@ function Home() {
                   <hr />
                 </div>
 
-              )) : <Loading />}
+              )) : <div style={{margin:"20%", color:"grey"}}><center>
+                <h1>Nothing to Display...</h1>
+                </center></div>}
             </div>
           </div>
         </div>

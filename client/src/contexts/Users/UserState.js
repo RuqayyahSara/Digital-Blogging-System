@@ -41,11 +41,13 @@ function UserState(props) {
 
     const getPosts = async () => {
         try {
+setLoading()
             let { data } = await axios.get("/blogs")
             dispatch({
                 type: SET_POSTS,
                 payload: data
             })
+removeLoading()
         } catch (err) {
             window.location.href = "/"
             localStorage.removeItem('token')

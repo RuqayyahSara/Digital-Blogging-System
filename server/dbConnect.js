@@ -56,5 +56,5 @@ async function data() {
 
 
 console.log("Connected");
-// data()
+// getDatas()
 export { getAllData, getData, pool, getDatas }
